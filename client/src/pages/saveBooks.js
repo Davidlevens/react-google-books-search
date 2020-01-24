@@ -6,7 +6,7 @@ import Card from "../components/Card";
 import SavedBookDetail from "../components/SavedBookDetail";
 import API from "../utils/API";
 
-class SavedBooks extends Component {
+class SaveBooks extends Component {
   state = {
     books: []
   };

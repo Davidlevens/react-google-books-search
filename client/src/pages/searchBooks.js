@@ -8,7 +8,7 @@ import SearchForm from "../components/SearchForm";
 import BookDetail from "../components/BookDetail";
 import API from "../utils/API";
 
-class Books extends Component {
+class SearchBooks extends Component {
   state = {
     books: [],
     search: ""
