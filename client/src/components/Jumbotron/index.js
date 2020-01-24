@@ -6,7 +6,7 @@ const Jumbotron = ({ children }) => {
       style={{ textAlign: "center", backgroundColor: "forestgreen" }}
       className="jumbotron"
     >
-      <img src="./google-logo.png" alt="google-logo" style={{ height: "200px" }} />
+      <img src="/images/books.jpg" alt="books-logo" style={{ height: "200px" }} />
     </div>
   );
 }
