@@ -72,4 +72,4 @@ class SavedBooks extends Component {
   }
 }
 
-export default SavedBooks;
+export default SaveBooks;
