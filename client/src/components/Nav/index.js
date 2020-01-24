@@ -5,7 +5,7 @@ const Nav = props => (
     <nav className="navbar fixed-top" style={{ marginBottom: "40px", backgroundColor: "forestgreen", height: "50px" }}>
       <ul className="nav navbar-nav navbar-left">
         <li>
-          <a href="/" style={{ color: "white", textDecoration: "none", fontSize: "20px" }}>
+          <a href="/searchBooks" style={{ color: "white", textDecoration: "none", fontSize: "20px" }}>
             Google Books Search
           </a>
         </li>

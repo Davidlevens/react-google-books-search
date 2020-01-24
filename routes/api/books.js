@@ -2,7 +2,7 @@ const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
 // Same as "/api/books"
-router.route("/")
+router.route("/searchBooks")
   .get(booksController.findAll)
   .post(booksController.create);
 
