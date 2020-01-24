@@ -5,7 +5,8 @@ const SavedBookDetail = props => {
     <span>
       <div className="col-md-4" style={{ float: "left", marginTop: "20px" }}>
         <p><img alt={props.title} className="img-fluid" src={props.src} style={{ margin: "0 auto" }} /></p>
-        <p style={{ fontSize: "30px" }}>{props.title}</p>
+        <h3 className="heading-title">{props.title}</h3>
+            {props.subtitle && <h5 className="heading-subtitle">{props.subtitle}</h5>}
         <p><strong>Author(s):</strong> {props.authors}</p>
         <p><strong>Publish Date:</strong> {props.date}</p>
         <p><strong>Google Books Link:</strong> <a href={props.link} target={"_blank"} >{props.title}</a></p>
