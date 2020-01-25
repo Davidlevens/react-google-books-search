@@ -44,7 +44,7 @@ class SaveBooks extends Component {
   render() {
     return (
       <Container>
-        <Row>
+      <Row>
           <Col size="md-12">
             <Jumbotron />
           </Col>
@@ -56,10 +56,9 @@ class SaveBooks extends Component {
                 {this.state.books.map(book => (
                   <SavedBookDetail
                     key={book._id}
-                    src={book 
-                      ? book.src 
-                      : "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-icon.png"}
+                    src={book.volumeInfo.imageLinks.thumbnail}
                     title={book.title}
+                    subtitle={book.subtitle}
                     authors={book.authors.join(", ")}
                     date={book.date}
                     description={book.description}

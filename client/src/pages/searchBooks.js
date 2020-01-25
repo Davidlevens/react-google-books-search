@@ -51,19 +51,10 @@ class SearchBooks extends Component {
   };
 
   // saves book to database
-  handleSaveBook = id => {
-    const book = this.state.books.find(book => book.id === id);
-
-
-    API.saveBook({
-      googleId: book.id,
-      title: book.volumeInfo.title,
-      subtitle: book.volumeInfo.subtitle,
-      link: book.volumeInfo.infoLink,
-      authors: book.volumeInfo.authors,
-      description: book.volumeInfo.description,
-      image: book.volumeInfo.imageLinks.thumbnail
-    }).then(() => this.searchBooks());
+  handleSaveBook = bookData => {
+    API.saveBook(bookData)
+      .then(res => alert("Book Saved!"))
+      .catch(err => console.log(err));
   };
 
   render() {
@@ -92,9 +83,7 @@ class SearchBooks extends Component {
                 {this.state.books.map(book => (
                   <BookDetail
                     key={book.id}
-                    src={book.volumeInfo.imageLinks 
-                      ? book.volumeInfo.imageLinks.thumbnail
-                      : "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-icon.png"}
+                    src={book.volumeInfo.imageLinks.thumbnail}
                     title={book.volumeInfo.title}
                     subtitle={book.volumeInfo.subtitle}
                     authors={book.volumeInfo.authors
@@ -103,7 +92,14 @@ class SearchBooks extends Component {
                     date={book.volumeInfo.publishedDate}
                     description={book.volumeInfo.description}
                     link={book.volumeInfo.infoLink}
-                    handleSaveBook={() => this.handleSaveBook(book.id)}
+                    handleSaveBook={() => this.handleSaveBook({ 
+                      title: book.volumeInfo.title,
+                      subtitle: book.volumeInfo.subtitle,
+                      src: book.volumeInfo.imageLinks.thumbnail,
+                      authors: book.volumeInfo.authors,
+                      date: book.volumeInfo.publishedDate,
+                      description: book.volumeInfo.description,
+                      link: book.volumeInfo.infoLink})}
                   />
                 ))}
               </Card>
