@@ -12,7 +12,7 @@ const Nav = props => (
       </ul>
       <ul className="nav navbar-nav navbar-right">
         <li>
-          <a href="/savedbooks" style={{ color: "white", textDecoration: "none", fontSize: "20px" }}>
+          <a href="/saveBooks" style={{ color: "white", textDecoration: "none", fontSize: "20px" }}>
             Your Saved Books
           </a>
         </li>

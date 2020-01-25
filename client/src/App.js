@@ -16,7 +16,7 @@ class App extends Component {
             <Route path="/saveBooks" component={SaveBooks} />
             <Route path="/noMatch" component={NoMatch} />
             <Redirect from="/" exact to="/searchBooks" />
-            <Redirect to="/noMatch" />
+            {/* <Redirect to="/noMatch" /> */}
           </Switch>
         </div>
       </Router>

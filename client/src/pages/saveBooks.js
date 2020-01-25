@@ -56,7 +56,7 @@ class SaveBooks extends Component {
                 {this.state.books.map(book => (
                   <SavedBookDetail
                     key={book._id}
-                    src={book.volumeInfo.imageLinks.thumbnail}
+                    src={book.image}
                     title={book.title}
                     subtitle={book.subtitle}
                     authors={book.authors.join(", ")}
