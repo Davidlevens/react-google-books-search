@@ -93,6 +93,7 @@ class SearchBooks extends Component {
                     description={book.volumeInfo.description}
                     link={book.volumeInfo.infoLink}
                     handleSaveBook={() => this.handleSaveBook({ 
+                      googleId: book.id,
                       title: book.volumeInfo.title,
                       subtitle: book.volumeInfo.subtitle,
                       src: book.volumeInfo.imageLinks.thumbnail,

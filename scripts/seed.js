@@ -3,7 +3,7 @@ const Book = require("../models/book");
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/googlebooks",
+  "mongodb://localhost/googlebooks",
   {
     useCreateIndex: true,
     useNewUrlParser: true,
@@ -63,17 +63,17 @@ const booksSeed = [
 ];
 
 async function seed() {
-  await mongoose
-    .connect(
-      MONGODB_URI,
-      options
-    )
-    .then(() => {
-      console.log("Seed: Connected to Database");
-    })
-    .catch(err => {
-      console.log("Seed: Not Connected to Database ERROR! ", err);
-    });
+  // await mongoose
+  //   .connect(
+  //     MONGODB_URI || "mongodb://localhost/googlebooks",
+  //     options
+  //   )
+  //   .then(() => {
+  //     console.log("Seed: Connected to Database");
+  //   })
+  //   .catch(err => {
+  //     console.log("Seed: Not Connected to Database ERROR! ", err);
+  //   });
   for (let book of booksSeed) {
     const { _id: bookId } = await new Book({
       title: book.title,
@@ -91,4 +91,4 @@ async function seed() {
   console.info("Seed: Done!");
 }
 
-seed();a
+seed();
