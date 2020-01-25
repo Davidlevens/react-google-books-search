@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Jumbotron from "../components/Jumbotron";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
@@ -43,6 +44,11 @@ class SaveBooks extends Component {
   render() {
     return (
       <Container>
+        <Row>
+          <Col size="md-12">
+            <Jumbotron />
+          </Col>
+        </Row>
         <Row>
           <Col size="md-12">
             {this.state.books.length ? (
