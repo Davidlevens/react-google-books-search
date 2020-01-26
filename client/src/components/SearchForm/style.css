@@ -1,0 +1,14 @@
+.btn {
+    background-color: #fff;
+  color: #845007;
+  border: 2px solid #845007;
+}
+
+.btn:focus {
+    outline-color: #845007;
+    box-shadow: none !important;
+  }
+
+input {
+    text-transform: uppercase;
+}

@@ -22,3 +22,61 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.brand-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.25rem;
+}
+
+.heading-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.9rem;
+}
+
+.heading-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+}
+
+p,
+.p-article {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.save-button,
+.delete-button,
+.view-button {
+  background-color: #c2b6c9;
+  color: #f1f6f7;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: calc(0.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  vertical-align: top;
+  line-height: 1.5;
+  align-items: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  user-select: none;
+  text-decoration: none;
+}

@@ -1,10 +1,11 @@
 import React from "react";
+import "./style.css";
 
 const SearchForm = props => {
   return (
     <form>
       <div className="form-group" style={{ textAlign: "center" }}>
-        <input style={{ textAlign: "left" }}
+        <input autocomplete="off" style={{ textAlign: "left" }}
           onChange={props.handleInputChange}
           value={props.value}
           name="search"
@@ -14,7 +15,7 @@ const SearchForm = props => {
           id="search"
         />
         <br />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button onClick={props.handleFormSubmit} className="btn btn-lg search-button">
           Search
         </button>
       </div>

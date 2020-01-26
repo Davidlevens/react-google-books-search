@@ -83,7 +83,7 @@ class SearchBooks extends Component {
                 {this.state.books.map(book => (
                   <BookDetail
                     key={book.id}
-                    src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail: null}
+                    src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : null}
                     title={book.volumeInfo.title}
                     subtitle={book.volumeInfo.subtitle}
                     authors={book.volumeInfo.authors

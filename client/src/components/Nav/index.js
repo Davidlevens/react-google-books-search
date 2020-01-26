@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 const Nav = props => (
   <div>
-    <nav className="navbar fixed-top" style={{ marginBottom: "40px", backgroundColor: "forestgreen", height: "50px" }}>
+    <nav className="navbar fixed-top" >
       <ul className="nav navbar-nav navbar-left">
         <li>
           <a href="/searchBooks" style={{ color: "white", textDecoration: "none", fontSize: "20px" }}>
